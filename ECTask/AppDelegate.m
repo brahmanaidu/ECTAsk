@@ -7,11 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.viewController = [[ViewController alloc]initWithNibName:@"ViewController~iPad" bundle:[NSBundle mainBundle]];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
